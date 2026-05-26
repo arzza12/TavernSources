@@ -17,7 +17,7 @@ import java.util.List;
 
 public class TavernWindow extends JFrame {
 
-    // --- Цвета для оформления в стиле таверны ---
+ 
     private static final Color BG_DARK       = new Color(28, 25, 25);
     private static final Color BG_PANEL      = new Color(168, 136, 102);
     private static final Color ACCENT_GOLD   = new Color(200, 155, 60);
@@ -26,7 +26,7 @@ public class TavernWindow extends JFrame {
     private static final Color TEXT_MUTED    = new Color(160, 140, 110);
     private static final Color BORDER_COLOR  = new Color(100, 75, 40);
 
-    // --- Виджеты ---
+
     private JCheckBox cbFireSauce;
     private JCheckBox cbDoubleVenison;
     private JCheckBox cbSnowBerries;
@@ -169,7 +169,7 @@ public class TavernWindow extends JFrame {
         return panel;
     }
 
-    // ---- Логика ----
+
 
     private void enforceCheckboxLimit() {
         int checked = countChecked();
@@ -194,12 +194,7 @@ public class TavernWindow extends JFrame {
         Dish dish = buildDish();
         priceLabel.setText("Итого: " + dish.getPrice() + " септимов");
 
-        // Смена цвета при дорогом заказе
-        if (dish.getPrice() >= 100) {
-            priceLabel.setForeground(ACCENT_FIRE);
-        } else {
-            priceLabel.setForeground(ACCENT_GOLD);
-        }
+
     }
 
 
