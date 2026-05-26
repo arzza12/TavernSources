@@ -6,11 +6,12 @@ public class NordicFlatbread extends DishDecorator {
         super(dish);
     }
 
-    public String getName() {
-        return getDish().getName() + " + Нордский лаваш";
+        @Override
+    protected String getSaucename() {
+        return " +  Нордская лепёшка";
     }
-
-    public int getPrice() {
-        return getDish().getPrice() + 7;
+    @Override
+    protected int getSauceprice() {
+        return 7;
     }
 }
