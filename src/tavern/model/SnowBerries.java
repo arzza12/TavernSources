@@ -6,11 +6,12 @@ public class SnowBerries extends DishDecorator {
         super(dish);
     }
 
-    public String getName() {
-        return getDish().getName() + " + Снежные ягоды";
+        @Override
+    protected String getSaucename() {
+        return " + Снежные ягоды";
     }
-
-    public int getPrice() {
-        return getDish().getPrice() + 6;
+    @Override
+    protected int getSauceprice() {
+        return 5;
     }
 }
