@@ -10,9 +10,6 @@ public abstract class DishDecorator implements Dish {
         this.dish = dish;
     }
 
-    public Dish getDish(){
-        return dish;
-    }
     @Override
     public final String getName() {
         return dish.getName() + getSaucename();
