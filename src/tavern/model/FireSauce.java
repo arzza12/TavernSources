@@ -6,11 +6,12 @@ public class FireSauce extends DishDecorator {
         super(dish);
     }
 
-    public String getName() {
-        return getDish().getName() + " + Огненный соус";
+        @Override
+    protected String getSaucename() {
+        return " + Огненный соус аэаэа";
     }
-
-    public int getPrice() {
-        return getDish().getPrice() + 40;
+    @Override
+    protected int getSauceprice() {
+        return 40;
     }
 }
