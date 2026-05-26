@@ -5,12 +5,13 @@ public class DoubleVenison extends DishDecorator {
     public DoubleVenison(Dish dish) {
         super(dish);
     }
-
-    public String getName() {
-        return getDish().getName() + " + Двойная оленина";
+    
+      @Override
+    protected String getSaucename() {
+        return " + Двойная порция оленины";
     }
-
-    public int getPrice() {
-        return getDish().getPrice() + 20;
+    @Override
+    protected int getSauceprice() {
+        return 20;
     }
 }
