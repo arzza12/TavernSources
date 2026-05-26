@@ -18,13 +18,13 @@ import java.util.List;
 public class TavernWindow extends JFrame {
 
  
-    private static final Color BG_DARK       = new Color(28, 25, 25);
-    private static final Color BG_PANEL      = new Color(168, 136, 102);
-    private static final Color ACCENT_GOLD   = new Color(200, 155, 60);
-    private static final Color ACCENT_FIRE   = new Color(210, 90, 30);
-    private static final Color TEXT_LIGHT    = new Color(235, 220, 190);
-    private static final Color TEXT_MUTED    = new Color(160, 140, 110);
-    private static final Color BORDER_COLOR  = new Color(100, 75, 40);
+    private static final Color BG_DARK       = new Color(255, 255, 255);
+    private static final Color BG_PANEL      = new Color(149, 140, 140);
+    private static final Color ACCENT_GOLD   = new Color(28, 25, 25);
+    private static final Color ACCENT_FIRE   = new Color(80, 76, 74);
+    private static final Color TEXT_LIGHT    = new Color(28, 25, 25);
+    private static final Color TEXT_MUTED    = new Color(255, 255, 255);
+    private static final Color BORDER_COLOR  = new Color(64, 63, 60);
 
 
     private JCheckBox cbFireSauce;
@@ -64,7 +64,7 @@ public class TavernWindow extends JFrame {
         title.setFont(new Font("Serif", Font.BOLD, 24));
         title.setForeground(ACCENT_GOLD);
 
-        JLabel subtitle = new JLabel("Меню • Нордское рагу (50 септимов)", SwingConstants.CENTER);
+        JLabel subtitle = new JLabel("Меню - Нордское рагу (50 септимов)", SwingConstants.CENTER);
         subtitle.setFont(new Font("Serif", Font.ITALIC, 14));
         subtitle.setForeground(TEXT_MUTED);
 
@@ -133,14 +133,14 @@ public class TavernWindow extends JFrame {
         orderHistory = new JTextArea();
         orderHistory.setEditable(false);
         orderHistory.setFont(new Font("Monospaced", Font.PLAIN, 12));
-        orderHistory.setBackground(new Color(22, 15, 8));
+        orderHistory.setBackground(new Color(255, 255, 255));
         orderHistory.setForeground(TEXT_LIGHT);
         orderHistory.setCaretColor(ACCENT_GOLD);
         orderHistory.setBorder(new EmptyBorder(6, 6, 6, 6));
 
         JScrollPane scroll = new JScrollPane(orderHistory);
         scroll.setBorder(BorderFactory.createLineBorder(BORDER_COLOR));
-        scroll.getViewport().setBackground(new Color(22, 15, 8));
+        scroll.getViewport().setBackground(new Color(255, 255, 255));
 
         panel.add(scroll, BorderLayout.CENTER);
         return panel;
@@ -150,7 +150,7 @@ public class TavernWindow extends JFrame {
         JPanel panel = new JPanel(new FlowLayout(FlowLayout.CENTER, 0, 10));
         panel.setBackground(BG_DARK);
 
-        JButton orderBtn = new JButton("⚔  Оформить заказ");
+        JButton orderBtn = new JButton("Оформить заказ");
         orderBtn.setFont(new Font("Serif", Font.BOLD, 16));
         orderBtn.setForeground(BG_DARK);
         orderBtn.setBackground(ACCENT_GOLD);
